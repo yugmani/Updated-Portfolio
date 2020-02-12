@@ -133,22 +133,7 @@
         height:100%;
     }
 
-    .social_medias {
-        /* background-color:gray; */
-        width:100%;
-        height:auto;
-        text-align:right;
-        margin:0;
-        padding:0;
-    }
-
-    .social_medias a {
-        font-size:20px;
-        margin:0px 10px 0px 25px;
-        padding:0px 5px 0px 15px;
-        text-decoration:none;
-    }
-
+   
 
     /* BODY SECTION */
     
@@ -166,13 +151,20 @@
         text-align: left;
         border-bottom:1px solid white;
        }
-  
+  #profileImage {
+      width:35%;
+      margin:0 auto;
+      padding:10px;
+       border-radius:5%;  
+  }
 
     #img {
-       border:1px solid yellow ;
-       max-width:100%;
+        margin:0 auto;
+        padding:15px;
+       /* border:1px solid yellow ; */
+       max-width:90%;
        height:auto;
-       border-radius:50%;
+       border-radius:5%;
     }
 
     .card_Chicketo img{
@@ -185,21 +177,42 @@
     }
 
     #story {
-        width:55%;
+        width:60%;
        color:#777777;
        font-size: 15px;
-       text-align:left;       
+       text-align:left;   
+       padding:15px 10px 15px 20px;  
+       border-radius:5%;  
+   }
+
+   #profileImage #img:hover,
+   #story:hover 
+   {
+       background-color:rgb(9, 10, 97);
+       color:#f5f5f5;
+       transition:1s;
    }
 
     #front, 
     #back {
         margin:0 auto;
         width:40%;
+        height:70%;
+        padding:25px 5px 25px 35px;
         display:flex;
         flex-direction: column;
-        justify-content: left;
+        justify-content: center;
         text-align: left;
         font-size:15px;
+        border-radius:5%;
+    }
+
+    #front:hover,
+    #back:hover
+    {
+        background-color:rgb(9, 10, 97);
+        transition:2s;
+        /* opacity:0.8; */
     }
 
     .description {
@@ -220,11 +233,24 @@
         margin-top:20px;
         margin-bottom:10px;
         padding:10px 0px 10px 0px;
+        border:0;
     }
 
     table td {
         /* border-top: 1px solid rgb(126, 122, 122); */
         text-align:left;
+        /* padding-bottom:10px; */
+    }
+
+    td .description {
+       padding:8px 0px 10px 10px; 
+       border-radius:1.5%;
+    }
+
+    td .description:hover {
+        background-color:lightyellow;
+        transition:2s;
+        border:none;
     }
 
 
@@ -271,6 +297,16 @@
         flex-direction:column;
     }
 
+    .card_Grande:hover {
+        background-color: rgb(226, 226, 178);
+        transition:2s;
+    }
+
+    .card_Chicketo:hover {
+        background-color: rgb(197, 197, 134);
+        transition:2s;
+    }
+
     small {
         margin-left:5px;
         padding-left:5px;
@@ -300,10 +336,17 @@
         text-align:left;
         width:75%;
         margin:10px;
-        padding:5px 0px 5px 25px;
+        padding:5px 15px 5px 25px;
         color:yellow;
         border-left:1px solid silver;
       }
+
+      form:hover {
+          background-color:rgb(194, 191, 191);
+          transition: 2s;
+      }
+
+     
 
     footer {
         background-color:#1c0833;
@@ -345,3 +388,18 @@
         color:#7664b6;
     }
     
+    .social_medias {
+        /* background-color:gray; */
+        width:100%;
+        height:auto;
+        text-align:right;
+        margin:0;
+        padding:0;
+    }
+
+    .social_medias a {
+        font-size:20px;
+        margin:0px 10px 0px 25px;
+        padding:0px 5px 0px 15px;
+        text-decoration:none;
+    }
