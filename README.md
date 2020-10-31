@@ -1,2 +1,2 @@
-# homework
-A repo is created to deploy the assignments.
+# yugmani.github.io
+personal website live
