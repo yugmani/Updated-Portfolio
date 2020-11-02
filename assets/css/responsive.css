@@ -79,6 +79,7 @@
   #profile-image {
     width: 100%;
   }
+
   #my-img {
     /* width: 80%; */
     height: auto;
@@ -129,21 +130,24 @@
     flex-direction: column;
   }
 
+  .project-description {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
   .designation {
     width: 100%;
-  }
-  .designation h4 {
-    padding-left: 0;
-    margin-left: 0;
+    margin-bottom: 25px;
   }
 
   .job-details {
     width: 100%;
   }
 
-  .hr-image,
-  .kuhs-image {
-    width: 150px;
+  #worked .wrapper {
+    /* height: 400px; */
+    display: inline-grid;
+    grid-template-columns: 1fr;
   }
 
   .job-description {
@@ -152,6 +156,12 @@
 
   .contact-form {
     margin-bottom: 20px;
+  }
+
+  .kuhs-image,
+  .hr-image,
+  .job-title {
+    width: 100%;
   }
 
   .footer-info {
@@ -172,15 +182,35 @@
   .job-details {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    margin-bottom: 20px;
+  }
+
+  .hr-details,
+  .kuhs-details {
+    align-items: center;
+    justify-self: center;
+    width: 100%;
   }
 
   .hr-image,
   .kuhs-image {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     /* align-self: flex-start; */
-    flex-grow: 1;
+    /* flex-grow: 1; */
     /* padding: 10px; */
     /* background-color: brown; */
+  }
+
+  .flex-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .job-title,
+  .job-name {
+    width: 100%;
+    text-align: center;
   }
 }

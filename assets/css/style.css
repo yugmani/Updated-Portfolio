@@ -328,37 +328,42 @@ a:hover {
   /* background-color: #66cdaa; */
   /* background-color: #40e0d0; */
   /* width: 80%; */
-  max-height: 40px;
-
-  margin-top: 5px;
-  margin-bottom: 5px;
+  min-height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-left: 50px;
-  /* padding: 5px; */
+  padding: 0;
   transition: 0.3s ease-in-out;
-
   display: grid;
-  grid-template-columns: 50px auto;
+  grid-template-columns: 40px auto;
   column-gap: 0px;
   text-align: left;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
   /* align-items: center; */
 }
 
 .skill-set {
   background-color: rgb(3, 3, 100);
-  padding-left: 10px;
+  padding-left: 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .card-skill img {
-  object-fit: contain;
-  width: 40px;
-  max-height: 40px;
+  object-fit: cover;
+  width: 100%;
+  min-height: 100%;
   overflow: hidden;
   background-color: #40e0d0;
-  /* border-radius: 3px; */
+  transition: 0.5s ease-in-out;
 }
 
 .card-skill:hover {
-  background-color: rgb(150, 144, 163);
+  /* border: 1px solid #ffff00; */
+  box-shadow: 0 0 8px 1px #ffff00;
   transform: scale(1.01);
 }
 
@@ -373,42 +378,32 @@ a:hover {
 .covid-image,
 .weather-image,
 .store-image {
-  /* background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; */
   width: 100%;
   max-height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  box-shadow: 0 0 8px 1px darkgray;
+  box-shadow: 0 0 8px 1px rgb(83, 81, 81);
   margin: 0;
   padding: 0;
+  transition: 0.5s ease-in-out;
 }
 
-/* .covid-image {
-  background-image: url(../images/Yug_covid_19.png);
-} */
+.covid-image:hover,
+.weather-image:hover,
+.store-image:hover {
+  box-shadow: none;
+}
 
 .covid-image a > img,
 .store-image a > img,
 .weather-image a > img {
   object-fit: contain;
-  /* flex-shrink: 0;
-  -webkit-flex-shrink: 0; */
   max-width: 100%;
   min-height: 100%;
   display: block;
 }
-
-/* .weather-image {
-  background-image: url(../images/weather_dashboard.png);
-} */
-
-/* .store-image {
-  background-image: url(../images/google_store_locator.png);
-} */
 
 #degrees {
   background-image: url(../images/traf-ukTd6UiQbLQ-unsplash.jpg);
@@ -417,6 +412,7 @@ a:hover {
   background-size: cover;
   object-fit: contain;
 }
+
 .project-description {
   width: 280px;
   height: auto;
@@ -424,14 +420,29 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 5px; */
+  background-color: whitesmoke;
+  transition: 0.5s ease-in-out;
+}
+
+.project-title h5,
+.project-description .project-title {
+  color: black;
 }
 
 .project-description:hover {
   /* background-color: rgb(49, 47, 47); */
-  background-color: #7e7676;
-  transform: scale(1.01);
+  /* background-color: #7e7676; */
+  transform: scale(1.03);
   cursor: pointer;
+  /* box-shadow: 0 0 8px 1px rgb(83, 81, 81); */
+  box-shadow: 0 0 8px 1px #ffff00;
+}
+
+.project-description h6 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: darkslategray;
+  font-size: 13px;
 }
 
 .project-image {
@@ -463,6 +474,7 @@ a:hover {
   margin-top: 15px;
 }
 
+/* Work Section */
 #worked {
   background-image: url(../images/akin-cakiner-nkUFXi0JSX8-unsplash.jpg);
   background-repeat: no-repeat;
@@ -471,64 +483,95 @@ a:hover {
   object-fit: contain;
 }
 
+#worked .wrapper {
+  /* height: 400px; */
+  display: inline-grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
 .designation {
-  text-align: left;
-  flex-basis: 25%;
-  align-self: flex-start;
+  height: 350px;
+  flex: 1;
+  background-color: blue;
+  box-shadow: 0 0 8px 1px gray;
+  transition: 0.5s ease-in-out;
+}
+
+.designation img {
+  max-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
 }
 
 .job-details {
-  text-align: left;
-  flex-basis: 75%;
-  flex-wrap: no-wrap;
-  /* height: 130px; */
-  /* background-color: navy; */
-  flex-grow: 1;
-  padding: 10px;
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  column-gap: 10px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex: 1;
 }
 
 .job-description {
-  /* align-self: flex-start; */
-  flex-grow: 1;
-  /* padding: 10px; */
-  /* background-color: brown; */
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  text-align: left;
+  padding: 0;
+  margin: 0;
 }
 
-.hr-image {
-  background-image: url(../images/hrblock.png);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  background-color: slategray;
-  /* align-self: center; */
-  min-height: 100%;
+.job-description .flex-row {
+  padding: 0;
+  margin: 0;
+}
+
+.hr-details,
+.kuhs-details {
+  width: 80%;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+
+.hr-image,
+.kuhs-image {
+  max-width: 65px;
+  height: 70px;
+  justify-self: flex-start;
 }
 
 .kuhs-image {
-  background-image: url(../images/kuhs-logo.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   background-color: slategray;
-  /* align-self: center; */
-  min-height: 100%;
-  color: white;
 }
 
-/* .bga-image {
-  background-image: url(../images/logo-for-bga.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-color: brown;
-  align-self: flex-start;
-  min-height: 100%;
-  color: white;
-} */
+.job-name {
+  align-self: stretch;
+  text-align: left;
+  margin: 0;
+  padding-left: 10px;
+}
 
+.job-title {
+  margin: 0;
+  padding: 0;
+  justify-self: flex-end;
+}
+
+.hr-details:hover,
+.kuhs-details:hover,
+.designation:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+  /* box-shadow: 0 0 8px 1px rgb(83, 81, 81); */
+  box-shadow: 0 0 8px 1px #ffff00;
+}
+
+/* CONTACT SECTION */
 #contact {
   background-image: url(../images/kelly-sikkema-tk9RQCq5eQo-unsplash.jpg);
   background-repeat: no-repeat;
@@ -563,6 +606,13 @@ textarea {
   background-color: whitesmoke;
   border: 2px solid #f0f0f0;
   border-radius: 4px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  box-shadow: 0 0 8px 1px #ffff00;
 }
 
 button {
@@ -608,7 +658,11 @@ button:hover {
   visibility: hidden;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 200px;
+  top: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
 }
 
 .form-control.error small {
